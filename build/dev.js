@@ -6,6 +6,7 @@ const gulpConfig = path.resolve(__dirname, './compiler.js');
 
 async function run() {
   await dev();
+  console.log('aaa')
 
   const p = exec(`npx gulp -f ${gulpConfig} buildExample --color`);
   p.stdout.on('data', (stdout) => console.info(stdout));
